@@ -1,0 +1,108 @@
+.page-header{
+	padding: 39px 0 30px;
+	background:#fff; 
+}
+
+.logo{
+	display: inline-block;
+	width: 200px;
+	height: 46px;
+	background: url(../img/svg/logo.svg) no-repeat; 
+	background-size: cover;
+}
+.page-header__wrap{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.page-header__mail{
+	color: #4F4F4F;
+	font-size: 16px;
+	margin-right: 49px;
+	font-family: 'helveticaneuecyr';
+	    letter-spacing: 1.2px;
+}
+.page-header__phone{
+	display: inline-block;
+	font-size: 18px;
+	color: #333333;
+	margin-right: 49px;
+	span{
+		display: block;
+		font-size: 12px;
+		line-height: 12px;
+		letter-spacing: 2.8px;
+		color: #828282;
+		padding-top: 6px;
+	}
+}
+
+.page-header__info{
+	display: flex;
+}
+.menu-toggle-link{
+	display: inline-block;
+	border: 2px solid #477DA1;
+	border-radius: 30px;
+	display: flex;
+	align-items: center;
+	    padding: 11px 20px;
+    margin-top: -6px;
+	&.active{
+		.menu-toggle-link__icon{
+		    background-color: transparent;
+		    &:before{
+				-webkit-transform: translateY(6px) rotate(45deg);
+				-moz-transform: translateY(6px) rotate(45deg);
+				-ms-transform: translateY(6px) rotate(45deg);
+				-o-transform: translateY(6px) rotate(45deg);
+				transform: translateY(6px) rotate(45deg);
+		    }
+		    &:after{
+				-webkit-transform: translateY(-6px) rotate(-45deg);
+				-moz-transform: translateY(-6px) rotate(-45deg);
+				-ms-transform: translateY(-6px) rotate(-45deg);
+				-o-transform: translateY(-6px) rotate(-45deg);
+				transform: translateY(-6px) rotate(-45deg);
+		    }
+		}
+	}
+}
+.menu-toggle-link__txt{
+	font-size: 18px;
+	text-transform: uppercase;
+	color: #477DA1;
+	font-family: 'helveticaneuecyr';
+	margin-right: 25px;
+}
+
+
+.menu-toggle-link__icon{
+	display: block;
+	position: relative;
+	    top: -1px;
+	margin-top: 6px;
+	margin-bottom: 6px;
+	width: 20px;
+	height: 2px;
+	background-color: #477DA1;
+	transition: all 0.3s ease;
+	&:before,
+	&:after{
+		display: block;
+		width: 26px;
+		height: 2px;
+		background-color: #477DA1;
+		transition: all 0.3s ease;
+		position: absolute;
+		content: "";
+		right: 0;
+	}
+	&:before{
+		top: -6px;
+	}
+	&:after{
+		top: 6px;
+	}
+}

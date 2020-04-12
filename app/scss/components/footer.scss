@@ -1,0 +1,24 @@
+.page-footer{
+	flex-shrink: 0;
+	background: #2F3234;
+	padding: 35px 0 39px;
+}
+
+.page-footer__wrap{
+	display: flex;
+	align-items:center;
+	justify-content: space-between;
+}
+
+.copyright{
+	font-size: 14px;
+	color: #6D9EB2;
+	    font-style: italic;
+}
+
+.develop{
+	display: inline-block;
+	width: 89px;
+	height: 26px;
+	background: url(../img/svg/97.svg) no-repeat; 
+}
