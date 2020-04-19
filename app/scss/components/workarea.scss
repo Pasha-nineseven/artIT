@@ -46,5 +46,9 @@
 		&:focus{
 			background: #fff;
 		}
+		&:disabled{
+			opacity: 0.2;
+			pointer-events: none;
+		}
 	}
 }
