@@ -166,14 +166,19 @@
    }
    .page-title{
    		h2{
-   			color: #fff;
+   			color: #BDBDBD;
    			font-family: 'helveticaneuecyr-light';
-   			font-size: 20px
+   			font-size: 20px;
+   			&:after{
+   				background: #828282;
+   			}
    		}
    	}
    	.plan__txt{
-	    max-width: 500px;
-	    padding-top: 50px;
+		max-width: 500px;
+		padding-top: 50px;
+		color: #BDBDBD;
+		font-size: 20px;
 	}
 	.socials{
 		margin-top: -30px;
