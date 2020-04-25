@@ -78,6 +78,7 @@
 		border: 2px solid #477DA1;
     }
 	&.active{
+		border: 1px solid #477DA1;
 		.menu-toggle-link__icon{
 		    background-color: transparent;
 		    &:before{
@@ -147,7 +148,7 @@
     position: fixed;
     left: 0;
     top: 0;
-    background: #000;
+   background: #1D2124;
     width: 100%;
     height: 100vh;
     color: #fff;
