@@ -445,6 +445,7 @@
 	}
 	.who {
 	    padding: 50px 0;
+	    position: static;
 	}
 	.who .page-title{
 		margin-bottom: 20px;
@@ -772,6 +773,18 @@
 	}
 	.page-news-slider{
 		margin-bottom: 50px;
+	}
+	.who + .effectiveness:after,
+	.who + .effectiveness:before{
+		display: none;
+	}
+	.effect .plan-in {
+	    padding-top: 0;
+	    margin-top: 0;
+	}
+	.effect .c1 {
+	    top: 0;
+	    display: inline;
 	}
 }
 

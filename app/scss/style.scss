@@ -67,6 +67,7 @@ ymaps[class$="-copyright"] {
 	padding: 115px 0;
 }
 .layout--index{
+	background: #fff;
 	.page-content{
 		padding-top: 0;
 		padding-bottom: 0;
@@ -252,6 +253,7 @@ ymaps[class$="-copyright"] {
 	margin-bottom: 23px;
     letter-spacing: 0.9px;
     text-transform: uppercase;
+    font-family: "helveticaneuecyr", Arial, sans-serif;
 }
 .plan__txt{
 	line-height: 1.5;
@@ -519,9 +521,10 @@ ymaps[class$="-copyright"] {
 
 
 .how{
-	padding: 117px 0 0; 
-	position: relative;
-	z-index: 1;
+	padding: 117px 0 0;
+    position: relative;
+    z-index: 8;
+    // background: #fff;
 	.plan-in{
 		margin-bottom: 88px;
 	}
@@ -569,10 +572,15 @@ ymaps[class$="-copyright"] {
 	background: #EDEDED;
 	position: relative;
 	.page-title{
-		margin-bottom: 55px;
+		margin-bottom:77px;
+		h2{
+			&:after{
+				left: calc(100% + 31px);
+			}
+		}
 	}
 	.container{
-		padding-bottom: 100px;
+		padding-bottom: 95px;
 	}
 	// &:after{
 	//     content: "";
@@ -629,7 +637,7 @@ ymaps[class$="-copyright"] {
 				background: linear-gradient(180deg, #206DA9 0.3%, #674d76 100%);
 				position: absolute;
 				left: 50%;
-				margin-left: 1px;
+				margin-left: -1px;
 				top: 140px;
 			}
 		}
@@ -650,19 +658,21 @@ ymaps[class$="-copyright"] {
 		}
 	}
 	&:nth-child(2){
+		margin-bottom: 53px;
 		.how-list__num{
 			color: #674d76;
 			&:after{
 				content: "";
 				display: inline-block;
-				width: 3px;
-				height: 90px;
-				background: linear-gradient(180deg, #674d76 0.3%, #AE2234 100%);
+				width: 18px;
+				height: 105px;
+				background: url(../img/svg/arrow-second.svg) center no-repeat;
 				position: absolute;
 				left: 50%;
-				margin-left: 1px;
+				margin-left: -9px;
 				top: 130px;
 			}
+
 		}
 	}
 	&:nth-child(3){
@@ -735,12 +745,21 @@ ymaps[class$="-copyright"] {
 	color: #E0E0E0;
 	.page-title{
 		margin-bottom:72px;
+
 	} 
 	h2{
 		color: #E0E0E0;
 		max-width: 630px;
 		&:after{
-			background: #fff;
+			background: #BDBDBD;
+			
+		}
+	}
+	&.m-top{
+		h2{
+			&:after{
+				left: calc(100% - 45px);
+			}
 		}
 	}
 }
@@ -767,6 +786,7 @@ ymaps[class$="-copyright"] {
 	background: #EDEDED;
 	.plan-in{
 		margin-bottom: 83px;
+		margin-top: -37px;
 	}
 	&.m-white{
 		background: #fff;
@@ -920,8 +940,50 @@ ymaps[class$="-copyright"] {
 .who{
 	padding: 117px 0 78px; 
 	position: relative;
+	// background: #fff;
+	// z-index: -1;
 	.page-title {
 	    margin-bottom: 60px;
+	}
+	&:after{
+		content: "";
+		    position: absolute;
+	    left: 50%;
+	    bottom: -51px;
+	    width: 6px;
+	    height: 51px;
+	    display: inline-block;
+	    background: url(../img/svg/arr.svg) center no-repeat;
+	    background-size: cover;
+	    margin-left: -4px;
+	}
+	&+.effectiveness{
+		position: relative;
+		&:before{
+			content: "";
+			position: absolute;
+		    left: 50%;
+		    top: 0;
+		    width: 6px;
+		    height: 51px;
+		    display: inline-block;
+		    background: url(../img/svg/arr.svg) center no-repeat;
+		    background-size: cover;
+		    margin-left: -4px;
+		}
+		&:after{
+			content: "";
+			display: inline-block;
+			width: 2px;
+			height: 45px;
+			background: #BDBDBD;
+			position: absolute;
+			top: -45px;
+			left: 50%;
+			margin-left: -2px;
+			margin-bottom: -1px;
+			opacity: 0.5;
+		}
 	}
 }
 .who__list{
@@ -1191,6 +1253,7 @@ ymaps[class$="-copyright"] {
 
 .geography{
 	padding-top: 105px;
+	background: #fff;
 	.container{
 		padding-bottom: 140px;
 		position: relative;
@@ -1257,7 +1320,8 @@ ymaps[class$="-copyright"] {
 	.page-title h2{
 		color: #E0E0E0;
 		&:after{
-			background: #fff;
+			background: #BDBDBD;
+			left: calc(100% + 74px);
 		}
 	}
 }
@@ -1355,6 +1419,25 @@ ymaps[class$="-copyright"] {
 .effect{
 	padding: 112px 0 38px;
 	background: #fff;
+	.c1{
+		display: block;
+		position: relative;
+		font-family: 'helveticaneuecyr';
+		top: 26px;
+	}
+	.page-title{
+		padding-bottom: 30px;
+		h2{
+			&:after{
+				left: calc(100% + 29px);
+				top: 6px;
+			}
+		}
+	}
+	.plan-in{
+		    padding-top: 0;
+    	margin-top: -84px;
+	}
 }
 .effect-wrap{
 	position: relative;
@@ -1626,6 +1709,7 @@ ymaps[class$="-copyright"] {
 	background: #BACAD3;
 	padding: 106px 0 119px;
 	position: relative;
+	z-index: 9;
 	.more-wrap{
 		margin-bottom: 0;
 		padding-top: 25px;
