@@ -257,6 +257,40 @@ $(document).ready(function() {
 
     }
 
+    if($('.news-in-slider').length>0) {
+        var $statusNews = $('.pagingInfo-news_in .s-current');
+        var $statusTotalNews = $('.pagingInfo-news_in .s-total');
+        var $sliderNews = $('.news-in-slider');
+        $sliderNews.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+            var i = (currentSlide ? currentSlide : 0) + 1;
+            $statusNews.text('0' + i);
+            $statusTotalNews.text('/' + '0' + slick.slideCount);
+            // console.log( $statusNews.text);
+            // console.log( i);
+        });
+        $sliderNews.not('.slick-initialized').slick({
+            infinite: true,
+            dots: false,
+            arrows:true,
+            // slidesToShow: 3,
+            variableWidth: true,
+            slidesToScroll: 1,
+            adaptiveHeight: false,
+            prevArrow: $(".js-news_in-prev"),
+            nextArrow: $(".js-news_in-next"),
+            responsive: [
+                {
+                    breakpoint: 600,
+                    settings: {
+                        variableWidth: false,
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                    }
+                },
+            ]
+        });
+    }
+
 
 	sliderHowInit();
 	sliderWhoInit();
@@ -530,5 +564,6 @@ $('body').append(
 		<li><a href="index.html">Главная</a></li> \
 		<li><a href="article.html">Статьи</a></li> \
         <li><a href="news.html">Новости</a></li> \
+        <li><a href="news-in.html">Новость</a></li> \
 	</ol> \
 </div>');

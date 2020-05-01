@@ -55,4 +55,47 @@
 			pointer-events: none;
 		}
 	}
+	strong{
+		font-family: 'helveticaneuecyr';
+		font-weight: normal;
+		// line-height: 1.5;
+	}
+	cite{
+		font-style: normal;
+		padding-left: 62px;
+		position: relative;
+		display: block;
+		&:before{
+			content: "";
+			display: inline-block;
+			width: 54px;
+			height: 38px;
+			background: url(../img/svg/cite.svg) no-repeat;
+			position: absolute;
+			left: 0;
+			top: 0; 
+		}
+	}
+	ul{
+		margin: 0;
+		margin-bottom: 20px;
+		padding: 0;
+		li{
+			margin-bottom: 5px;
+			list-style-type: none;
+			padding-left: 10px;
+			position: relative;
+			&:before{
+				content: "";
+				display: inline-block;
+				width: 5px;
+				height: 5px;
+				border: 1px solid #4F4F4F;
+				border-radius: 50%;
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+		}
+	}
 }
