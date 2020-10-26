@@ -294,10 +294,71 @@ $(document).ready(function() {
 
 	sliderHowInit();
 	sliderWhoInit();
+    sliderProblemsInit();
 	sliderSamplesInit();
 	sliderNumeralInit();
 	sliderEffectInit();
 	//sliderStatusInit();
+
+
+
+
+    if($('.samples-c-slider').length>0) {
+        var $statusNews = $('.pagingInfo-samples-c .s-current');
+        var $statusTotalNews = $('.pagingInfo-samples-c .s-total');
+        var $sliderNews = $('.samples-c-slider');
+        $sliderNews.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+            var i = (currentSlide ? currentSlide : 0) + 1;
+            $statusNews.text('0' + i);
+            $statusTotalNews.text('/' + '0' + slick.slideCount);
+            // console.log( $statusNews.text);
+            // console.log( i);
+        });
+        $sliderNews.not('.slick-initialized').slick({
+            infinite: true,
+            dots: false,
+            arrows:true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            adaptiveHeight: false,
+            prevArrow: $(".js-samples-c-prev"),
+            nextArrow: $(".js-samples-c-next"),
+            responsive: [
+                {
+                    breakpoint: 1100,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                    }
+                },
+            ]
+        });
+    }
+
+
+    //TABS
+    $('ul.tabs li').click(function(){
+        var tab_id = $(this).attr('data-tab');
+
+        $('ul.tabs li').removeClass('current');
+        $('.tab-content').removeClass('current');
+
+        $(this).addClass('current');
+        $("#"+tab_id).addClass('current');
+
+        // setTimeout(function() {
+        //     sliderSamplesInit();
+        //     $('.samples-list').slick("setPosition");
+        // }, 1000);
+        
+    })
 });
 
 
@@ -306,6 +367,7 @@ $(document).ready(function() {
 $(window).resize(function () {
 	sliderHowInit();
 	sliderWhoInit();
+    sliderProblemsInit();
 	sliderSamplesInit();
 	sliderNumeralInit();
 	sliderEffectInit();
@@ -406,14 +468,14 @@ function sliderWhoInit() {
     }
 }
 
-function sliderSamplesInit() {
-	var $status = $('.pagingInfo-samples .s-current');
-	var $statusTotal = $('.pagingInfo-samples .s-total');
-    var $slider = $('.samples-list')
+function sliderProblemsInit() {
+    var $status = $('.pagingInfo-pr .s-current');
+    var $statusTotal = $('.pagingInfo-pr .s-total');
+    var $slider = $('.problems__wrap');
 
     if($(window).width() < 768) {
 
-    	$slider.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+        $slider.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
             var i = (currentSlide ? currentSlide : 0) + 1;
             $status.text('0' + i);
             $statusTotal.text('/' + '0' + slick.slideCount);
@@ -422,22 +484,63 @@ function sliderSamplesInit() {
             infinite: true,
             dots: false,
             arrows:true,
-            slidesToShow: 2,
+            slidesToShow: 1,
             slidesToScroll: 1,
             adaptiveHeight: false,
-            prevArrow: $(".js-samples-prev"),
-      		nextArrow: $(".js-samples-next"),
-            responsive: [
-			    {
-			      	breakpoint: 600,
-			      	settings: {
-			        	slidesToShow: 1,
-			        	slidesToScroll: 1,
-			      	}
-			    },
-			]
+            prevArrow: $(".js-pr-prev"),
+            nextArrow: $(".js-pr-next"),
         });
 
+       
+    } else{
+        if($slider.hasClass('slick-initialized')) {
+            $slider.slick("unslick");
+        }
+    }
+}
+
+
+
+function sliderSamplesInit() {
+	
+    var $slider = $('.samples-list');
+
+    if($(window).width() < 768) {
+
+
+        $slider.each(function(index) {
+            var $status = $(this).parents('.samples-list-wrap').find('.pagingInfo-samples .s-current');
+            var $statusTotal = $(this).parents('.samples-list-wrap').find('.pagingInfo-samples .s-total');
+            $(this).on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+                var i = (currentSlide ? currentSlide : 0) + 1;
+                $status.text('0' + i);
+                //$(this).parents('.samples-list-wrap').find('.slider-nav').css('background','red');
+                $statusTotal.text('/' + '0' + slick.slideCount);
+                //console.log($status)
+            });
+            //console.log(index);
+            $(this).not('.slick-initialized').slick({
+                infinite: true,
+                dots: false,
+                arrows:true,
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                adaptiveHeight: false,
+                prevArrow: $(this).parents('.samples-list-wrap').find(".js-samples-prev"),
+                nextArrow: $(this).parents('.samples-list-wrap').find(".js-samples-next"),
+                responsive: [
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                        }
+                    },
+                ]
+            });
+        });
+            
+    
        
     } else{
         if($slider.hasClass('slick-initialized')) {
@@ -551,19 +654,3 @@ function getScrollbarWidth() {
     return widthNoScroll - widthWithScroll;
 }
 
-// links pages
-$('body').append(
-	'<div style="position: fixed; z-index: 1005; bottom: 0; right: 0; background: #fff; border: solid 1px #828286; width: 200px;"> \
-		<a href="javascript:void(0);" style="float: right;background:#ccc; color:#000; padding: 5px 10px; text-decoration: none; font-size: 16px" onclick="$(this).parent().hide()">Close X</a> \
-	<style> \
-		#pages { padding: 10px 20px 0 50px; font-size: 18px; } \
-		#pages a { text-decoration: none; } \
-		#pages li { margin: 5px 0; } \
-	</style> \
-	<ol id="pages"> \
-		<li><a href="index.html">Главная</a></li> \
-		<li><a href="article.html">Статьи</a></li> \
-        <li><a href="news.html">Новости</a></li> \
-        <li><a href="news-in.html">Новость</a></li> \
-	</ol> \
-</div>');
