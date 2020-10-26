@@ -97,8 +97,7 @@ ymaps[class$="-copyright"] {
 	.results,
 	.errors .indent,
 	.target,
-	.questions,
-	.how-list.m-erp{
+	.questions{
 		overflow: hidden;
 	}
 
@@ -719,6 +718,9 @@ ymaps[class$="-copyright"] {
 			color: #AE2234;
 		}
 	}
+}
+.how-list__wrap{
+	overflow: hidden;
 }
 
 .how-list__title{
@@ -3427,7 +3429,7 @@ ymaps[class$="-copyright"] {
 		// border-color: red transparent transparent transparent;
 		position: absolute;
 		left: 50%;
-		margin-left: -6px;
+		    transform: translateX(-50%);
 		top: calc(100% - 25px);
     }
 }

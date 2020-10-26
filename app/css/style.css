@@ -738,8 +738,7 @@ ymaps[class$="-copyright"] {
   .layout--card .results,
   .layout--card .errors .indent,
   .layout--card .target,
-  .layout--card .questions,
-  .layout--card .how-list.m-erp {
+  .layout--card .questions {
     overflow: hidden; }
 
 .btn {
@@ -1268,6 +1267,9 @@ ymaps[class$="-copyright"] {
         top: 130px; }
   .how-list__item:nth-child(3) .how-list__num {
     color: #AE2234; }
+
+.how-list__wrap {
+  overflow: hidden; }
 
 .how-list__title {
   font-size: 24px;
@@ -3688,7 +3690,9 @@ ymaps[class$="-copyright"] {
     border-width: 10px 6.5px 0 6.5px;
     position: absolute;
     left: 50%;
-    margin-left: -6px;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
     top: -webkit-calc(100% - 25px);
     top: calc(100% - 25px); }
 
@@ -4307,12 +4311,17 @@ ymaps[class$="-copyright"] {
     margin-right: 0; }
   .target__item {
     width: 100%;
-    padding-right: 0; }
+    padding-right: 0;
+    margin-bottom: 30px; }
+    .target__item:last-child {
+      margin-bottom: 0; }
   .target .page-title {
     margin-bottom: 20px; }
   .effectiveness-add {
     padding-left: 0;
     margin: -60px 0 35px; }
+  .results__list {
+    margin-right: 0; }
   .route {
     padding: 50px 0 0; }
     .route .container {
@@ -4760,9 +4769,14 @@ ymaps[class$="-copyright"] {
   .results____item {
     font-size: 18px; }
   .results__count {
-    top: 0; }
+    top: 0;
+    left: 7px; }
   .results__count:before {
-    top: -26px; }
+    top: -22px;
+    left: -22px;
+    width: 64px;
+    height: 66px;
+    background-size: contain; }
   .results .container {
     padding: 0; }
   .more-articles {
@@ -4880,7 +4894,12 @@ ymaps[class$="-copyright"] {
   .how-list.m-erp {
     padding-top: 40px; }
   .who:after {
-    display: none; } }
+    display: none; }
+  .how-list.m-erp .page-title {
+    margin-bottom: 20px; }
+  .target__num {
+    padding-bottom: 10px;
+    margin-bottom: 10px; } }
 
 @media screen and (max-width: 600px) {
   .page-title h2 {
@@ -5094,7 +5113,15 @@ ymaps[class$="-copyright"] {
     margin-bottom: 40px;
     padding-left: 50px; }
     .results____item:last-child {
-      margin-bottom: 0; } }
+      margin-bottom: 0; }
+  .effectiveness__item.m-submit {
+    margin-bottom: 0; }
+  .problems__num {
+    font-size: 50px;
+    line-height: 45px; }
+  .problems__title {
+    font-size: 20px;
+    margin-bottom: 20px; } }
 
 @media screen and (max-width: 400px) {
   .start.m-card .video-wrap {

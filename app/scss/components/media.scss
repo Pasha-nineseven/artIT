@@ -661,6 +661,10 @@
 	.target__item {
 	    width: 100%;
 	    padding-right: 0;
+	    margin-bottom: 30px;
+	    &:last-child{
+	    	margin-bottom: 0;
+	    }
 	}
 	.target .page-title{
 		margin-bottom: 20px;
@@ -668,6 +672,9 @@
 	.effectiveness-add {
 	    padding-left: 0;
 	    margin: -60px 0 35px;
+	}
+	.results__list {
+	    margin-right: 0;
 	}
 	.route{
 		padding: 50px 0 0;
@@ -1242,9 +1249,14 @@
 	}
 	.results__count{
 		top: 0;
+		left: 7px;
 	}
 	.results__count:before {
-	    top: -26px;
+	   top: -22px;
+	    left: -22px;
+	    width: 64px;
+	    height: 66px;
+	    background-size: contain;
 	}
 	.results{
 		.container{
@@ -1388,6 +1400,13 @@
 	}
 	.who:after{
 		display: none;
+	}
+	.how-list.m-erp .page-title{
+		margin-bottom: 20px;
+	}
+	.target__num {
+	    padding-bottom: 10px;
+	    margin-bottom: 10px;
 	}
 }
 
@@ -1666,6 +1685,17 @@
 	    &:last-child{
 	    	margin-bottom: 0;
 	    }
+	}
+	.effectiveness__item.m-submit{
+		margin-bottom: 0;
+	}
+	.problems__num {
+	    font-size: 50px;
+	    line-height: 45px;
+	}
+	.problems__title {
+	    font-size: 20px;
+	    margin-bottom: 20px;
 	}
 }
 
