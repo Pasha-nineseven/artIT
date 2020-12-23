@@ -103,6 +103,12 @@ ymaps[class$="-copyright"] {
 
 }
 
+.layout--default{
+	.df-container{
+		padding-left: 100px;
+	}
+}
+
 .btn{
 	display: inline-block;
 	background: #CE2635;
@@ -296,6 +302,53 @@ ymaps[class$="-copyright"] {
 		color: #E0E0E0;
 		&:after{
 			background: #fff; 
+		}
+	}
+	.afbf_item_pole {
+	    margin: 0 0 20px;
+	}
+	.afbf_name{
+		margin-bottom: 10px;
+	}
+	select{
+		width: 100%;
+		background: transparent;
+		border: 1px solid #fff;
+		border-radius: 3px;
+		color: #333333;
+		padding: 12.5px 30px;
+		color: #fff;
+		transition: all .3s ease;
+		&:hover{
+			
+			background: rgba(255, 255, 255, 0.1);
+			
+		}
+		&:focus{
+			background: #fff;
+			color: #000;
+		}
+	}
+	textarea{
+		width: 100%;
+		background: transparent;
+		border: 1px solid #fff;
+		border-radius: 3px;
+		color: #333333;
+		padding: 10px 30px;
+		color: #fff;
+		transition: background .3s ease;
+		height: 150px;
+		min-height: 80px;
+		resize:vertical;
+		&:hover{
+			
+			background: rgba(255, 255, 255, 0.1);
+			
+		}
+		&:focus{
+			background: #fff;
+			color: #000;
 		}
 	}
 }

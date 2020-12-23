@@ -741,6 +741,9 @@ ymaps[class$="-copyright"] {
   .layout--card .questions {
     overflow: hidden; }
 
+.layout--default .df-container {
+  padding-left: 100px; }
+
 .btn {
   display: inline-block;
   background: #CE2635;
@@ -905,6 +908,43 @@ ymaps[class$="-copyright"] {
     color: #E0E0E0; }
     .contacts h2:after {
       background: #fff; }
+  .contacts .afbf_item_pole {
+    margin: 0 0 20px; }
+  .contacts .afbf_name {
+    margin-bottom: 10px; }
+  .contacts select {
+    width: 100%;
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    color: #333333;
+    padding: 12.5px 30px;
+    color: #fff;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease; }
+    .contacts select:hover {
+      background: rgba(255, 255, 255, 0.1); }
+    .contacts select:focus {
+      background: #fff;
+      color: #000; }
+  .contacts textarea {
+    width: 100%;
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    color: #333333;
+    padding: 10px 30px;
+    color: #fff;
+    -webkit-transition: background .3s ease;
+    transition: background .3s ease;
+    height: 150px;
+    min-height: 80px;
+    resize: vertical; }
+    .contacts textarea:hover {
+      background: rgba(255, 255, 255, 0.1); }
+    .contacts textarea:focus {
+      background: #fff;
+      color: #000; }
 
 .contacts-wrap {
   display: -webkit-box;
@@ -3812,7 +3852,8 @@ ymaps[class$="-copyright"] {
   .layout--index .page-content > .container {
     padding: 0; }
   .indent,
-  .contacts-logo {
+  .contacts-logo,
+  .layout--default .df-container {
     padding-left: 0; }
   .how-list__item:nth-child(even) .how-list__title {
     width: -webkit-calc(50% - 100px);

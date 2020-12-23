@@ -14,5 +14,6 @@ $('body').append(
         <li><a href="news-in.html">Новость</a></li> \
         <li><a href="card.html">Card</a></li> \
         <li><a href="erp.html">Erp</a></li> \
+        <li><a href="test.html">Test</a></li> \
 	</ol> \
 </div>');
