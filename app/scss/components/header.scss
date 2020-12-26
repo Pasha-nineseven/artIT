@@ -157,7 +157,7 @@
     min-height: 100%;
     min-height: 100vh;
     overflow-y: auto;
-    padding-top: 43px;
+    padding-top: 37px;
     padding-bottom: 60px;
     display: none;
    .logo{
@@ -219,8 +219,8 @@
 }
 .top-menu-wrap{
 	margin-bottom: 95px;
-	padding-bottom: 45px;
-	border-bottom: 2px solid rgba(255,255,255, 0.2);
+	padding-bottom: 25px;
+	border-bottom: 1px solid rgba(255,255,255, 0.2);
 }
 .top-menu-wrap-inner{
 	padding-right: 298px;
@@ -254,10 +254,10 @@
 	}
 	&.active{
 		color: #477DA1;
-		position: absolute;
-		left: 100%;
-		top: 0;
 	}
+}
+a.top-menu-list__item{
+
 	&:hover{
 		color: #CE2635;
 	}
@@ -265,7 +265,7 @@
 
 .top-menu-sub{
 	flex: 1;
-    padding: 65px 0 0 75px;
+    padding: 0 0 0 75px;
 }
 
 .top-menu-sub__link{

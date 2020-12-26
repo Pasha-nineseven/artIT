@@ -57,10 +57,10 @@
 													<span class="top-menu-list__item active">Новости</span>
 													<a href="#" class="top-menu-list__item">Статьи</a>
 													<a href="#" class="top-menu-list__item">Вакансии</a>
-													<a href="#" class="top-menu-list__item">Услуги</a>
 													<a href="#" class="top-menu-list__item">Контакты</a>
 												</div>
 												<div class="top-menu-sub">
+													<span class="top-menu-list__item active">Услуги</span>
 													<div class="top-menu-sub__list">
 														<span class="top-menu-sub__link active">
 															<span class="top-menu-sub__num">01</span>
@@ -428,6 +428,39 @@
 		<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
 		<script src="js/libs.min.js"></script>
 		<script src="js/interface.js"></script>
+		<script>
+			$(document).ready(function() {
+				ymaps.ready(initializeDefaultMap);
+
+
+				function initializeDefaultMap() {
+				    if ($('#map').length>0) {
+
+				        var myMap = new ymaps.Map("map", {
+				            center:[53.899888,27.566757],
+				            zoom: 13,
+				            controls: []
+				        }, {
+				            suppressMapOpenBlock: true
+				        }); 
+				                
+				        var myPlacemark = new ymaps.Placemark([53.899888,27.566757],{
+				                // balloonContentBody: 'Адрес',
+				            },{
+				            iconLayout: 'default#image',
+				            iconImageHref: "img/content/label.png", 
+				            iconImageSize: [47,41],
+				            iconImageOffset: [-23, -20]
+				        }); 
+
+				        myMap.controls.add(new ymaps.control.ZoomControl({options: { position: { right: 20, top: 50 }}}));
+				        myMap.behaviors.disable('scrollZoom');
+
+				        myMap.geoObjects.add(myPlacemark);
+				    }
+				}
+			});
+		</script>
 		<script src="js/pages.js"></script>
 	</body>
 </html>

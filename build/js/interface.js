@@ -1,25 +1,11 @@
 $(document).ready(function() {
 	flexibility(document.documentElement);
 
-	ymaps.ready(initializeDefaultMap);
-	
-	
-
 	$('body').on('click','.js-menu-toggle-link', function(e){
 		e.preventDefault();
 		$(this).toggleClass('active');
 		$('.top-menu').fadeToggle(300);
 		$('body').toggleClass('fixed');
-
-
-		// if ( $( "body" ).is( ".fixed" ) ) {
-		//     $('body').css("paddingRight", getScrollbarWidth() + "px");
-		// } else{
-		// 	//setTimeout(function(){
-		// 		$('body').css("paddingRight", 0);
-		// 	//}, 300);
-		// }
-
 	});
 
 
@@ -31,6 +17,16 @@ $(document).ready(function() {
         animationEffect: "zoom-in-out", 
         infobar: false,
         clickOutside : 'close',
+        buttons: [
+            "close"
+        ],
+    });
+    //POPUP-INLINE
+    $(".js-popup-inline").fancybox({
+        speed : 330,
+        transitionEffect: "slide", 
+        animationEffect: "zoom-in-out", 
+        infobar: false,
         buttons: [
             "close"
         ],
@@ -58,8 +54,6 @@ $(document).ready(function() {
             var i = (currentSlide ? currentSlide : 0) + 1;
             $statusTop.text('0' + i);
             $statusTotalTop.text('/' + '0' + slick.slideCount);
-            // console.log( $statusNews.text);
-            // console.log( i);
         });
 	    $sliderTop.slick({
 	        infinite: true,
@@ -294,7 +288,7 @@ $(document).ready(function() {
 
 	sliderHowInit();
 	sliderWhoInit();
-    sliderProblemsInit();
+    //sliderProblemsInit();
 	sliderSamplesInit();
 	sliderNumeralInit();
 	sliderEffectInit();
@@ -374,38 +368,7 @@ $(window).resize(function () {
 	//sliderStatusInit();
 });
 
-// $(window).load(function(){
-
-// });
-
 // functions
-function initializeDefaultMap() {
-    if ($('#map').length>0) {
-
-        var myMap = new ymaps.Map("map", {
-            center:[53.899888,27.566757],
-            zoom: 13,
-            controls: []
-        }, {
-            suppressMapOpenBlock: true
-        }); 
-                
-        var myPlacemark = new ymaps.Placemark([53.899888,27.566757],{
-                // balloonContentBody: 'Адрес',
-            },{
-            iconLayout: 'default#image',
-            iconImageHref: "img/content/label.png", 
-            iconImageSize: [47,41],
-            iconImageOffset: [-23, -20]
-        }); 
-
-
-        myMap.controls.add(new ymaps.control.ZoomControl({options: { position: { right: 20, top: 50 }}}));
-        myMap.behaviors.disable('scrollZoom');
-
-        myMap.geoObjects.add(myPlacemark);
-    }
-}
 
 function sliderHowInit() {
 	var $status = $('.pagingInfo-how .s-current');
@@ -468,36 +431,36 @@ function sliderWhoInit() {
     }
 }
 
-function sliderProblemsInit() {
-    var $status = $('.pagingInfo-pr .s-current');
-    var $statusTotal = $('.pagingInfo-pr .s-total');
-    var $slider = $('.problems__wrap');
+// function sliderProblemsInit() {
+//     var $status = $('.pagingInfo-pr .s-current');
+//     var $statusTotal = $('.pagingInfo-pr .s-total');
+//     var $slider = $('.problems__wrap');
 
-    if($(window).width() < 768) {
+//     if($(window).width() < 768) {
 
-        $slider.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
-            var i = (currentSlide ? currentSlide : 0) + 1;
-            $status.text('0' + i);
-            $statusTotal.text('/' + '0' + slick.slideCount);
-        });
-        $slider.not('.slick-initialized').slick({
-            infinite: true,
-            dots: false,
-            arrows:true,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            adaptiveHeight: false,
-            prevArrow: $(".js-pr-prev"),
-            nextArrow: $(".js-pr-next"),
-        });
+//         $slider.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+//             var i = (currentSlide ? currentSlide : 0) + 1;
+//             $status.text('0' + i);
+//             $statusTotal.text('/' + '0' + slick.slideCount);
+//         });
+//         $slider.not('.slick-initialized').slick({
+//             infinite: true,
+//             dots: false,
+//             arrows:true,
+//             slidesToShow: 1,
+//             slidesToScroll: 1,
+//             adaptiveHeight: false,
+//             prevArrow: $(".js-pr-prev"),
+//             nextArrow: $(".js-pr-next"),
+//         });
 
        
-    } else{
-        if($slider.hasClass('slick-initialized')) {
-            $slider.slick("unslick");
-        }
-    }
-}
+//     } else{
+//         if($slider.hasClass('slick-initialized')) {
+//             $slider.slick("unslick");
+//         }
+//     }
+// }
 
 
 
@@ -654,3 +617,24 @@ function getScrollbarWidth() {
     return widthNoScroll - widthWithScroll;
 }
 
+
+
+
+
+$(function () {
+    $('body').on('click','.js-a-toggle', function(e){
+        e.preventDefault();
+        $(this).parents('.problems__item').toggleClass('active');
+
+        var problemsCount = $('.problems__item.active').length;
+        $('#problemsCount').text(problemsCount);
+
+        if ((problemsCount >= 1) && (problemsCount <= 4) ) {
+            $('.problems-result').removeClass('bad good').addClass('middle');
+        } else if((problemsCount > 4)) {
+            $('.problems-result').removeClass('good middle').addClass('bad');
+        } else if((problemsCount == 0)) {
+            $('.problems-result').removeClass('bad middle').addClass('good');
+        }
+    });
+});
