@@ -920,11 +920,9 @@
 	    padding-right: 0;
 	    display: flex;
 	    flex-wrap:wrap;
-	    padding-left: 40px;
 	}
 	.top-menu-list__item.active{
 		position: static;
-		padding-left: 40px;
 	}
 	.top-menu-list__item {
 	    font-size: 18px;
@@ -1476,6 +1474,11 @@
 		.page-title{
 			display: none;
 		}
+	}
+	.top-menu-list__item.current:before {
+	    width: 36px;
+	    height: 42px;
+	    left: -10px;
 	}
 }
 

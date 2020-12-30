@@ -3696,6 +3696,40 @@ ymaps[class$="-copyright"] {
 		width: 400px;
 	}
 }
+.pagination{
+	display: flex;
+	flex-wrap:wrap;
+	align-items: center;
+	margin-bottom: 20px;
+}
+.pagination__link{
+	font-size: 20px;
+	line-height: 20px;
+	text-transform: uppercase;
+	color: #4F4F4F;
+	margin-right: 10px;
+	&:last-child{
+		margin-right: 0;
+	}
+}
+
+.pagination__link__prev{
+	display: inline-block;
+    width: 41px;
+    height: 20px;
+    padding: 0;
+    background: url(../img/svg/prev.svg) center no-repeat;
+    margin-right: 20px;
+}
+.pagination__link__next{
+	display: inline-block;
+    width: 41px;
+    height: 20px;
+    padding: 0;
+    background: url(../img/svg/next.svg) center no-repeat;
+    margin-left: 20px
+}
+
 
 @import "components/footer";
 

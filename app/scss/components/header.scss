@@ -255,6 +255,23 @@
 	&.active{
 		color: #477DA1;
 	}
+	&.current{
+		color: #CE2635;
+		position: relative;
+		&:before {
+		    content: "";
+		    border: 1px solid #0E95C0;
+		    width: 44px;
+		    height: 52px;
+		    position: absolute;
+		    left: -26px;
+		    top: -9px;
+		    border-radius: 22px/26px;
+		    transform: rotate(45deg);
+		    transition: all 0.3s ease;
+		    z-index: -1;
+		}
+	}
 }
 a.top-menu-list__item{
 
