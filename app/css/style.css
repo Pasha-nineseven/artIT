@@ -2191,6 +2191,9 @@ a.top-menu-list__item:hover {
       display: none; }
     .news-item:hover .samples-more span:after {
       opacity: 1; }
+  .news-item.m-cover .news-top,
+  .news-item.m-cover .news-txt {
+    display: none; }
 
 .news-in {
   display: block;
@@ -2508,18 +2511,24 @@ a.top-menu-list__item:hover {
   padding: 25px 100px 60px 100px;
   position: relative;
   width: 100%; }
-  .top-slider-pager__wrap:before {
-    content: "";
-    display: inline-block;
-    width: 48px;
-    height: 28px;
-    background: url(../img/svg/union-b.svg) center no-repeat;
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-            transform: translateY(-50%);
-    left: -100px; }
+
+.top-slider-pager__arr {
+  display: inline-block;
+  width: 48px;
+  height: 28px;
+  background: url(../img/svg/union-b.svg) center no-repeat;
+  position: fixed;
+  left: 20px;
+  bottom: 200px;
+  z-index: 10;
+  pointer-events: none;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease; }
+  .top-slider-pager__arr.active {
+    -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+            transform: rotate(180deg);
+    pointer-events: all; }
 
 .top-slider-pager__item {
   font-size: 14px;
@@ -3138,7 +3147,8 @@ a.top-menu-list__item:hover {
   line-height: 1.3;
   text-transform: uppercase;
   cursor: pointer;
-  margin-right: 106px; }
+  margin-right: 106px;
+  list-style-type: none; }
   .samples.m-card .tab-link:last-child {
     margin-right: 0; }
   .samples.m-card .tab-link.current {
@@ -4068,7 +4078,11 @@ a.top-menu-list__item:hover {
 
 @media screen and (max-width: 1400px) {
   .card-top .container:before {
-    left: 10px; } }
+    left: 10px; }
+  .top-slider-pager__arr {
+    left: 20px;
+    margin-left: 0;
+    bottom: 30px; } }
 
 @media screen and (max-width: 1240px) {
   .container {
@@ -4789,9 +4803,12 @@ a.top-menu-list__item:hover {
     display: flex;
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
-            flex-wrap: wrap; }
-  .top-menu-list__item.active {
-    position: static; }
+            flex-wrap: wrap;
+    padding-left: 0 !important; }
+  .top-menu-list__item.active
+.top-menu-list__item.active {
+    position: static;
+    padding-left: 0 !important; }
   .top-menu-list__item {
     font-size: 18px;
     margin-bottom: 15px;

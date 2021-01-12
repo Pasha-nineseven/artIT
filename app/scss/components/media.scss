@@ -13,6 +13,11 @@
 	.card-top .container:before {
 	    left: 10px;
 	}
+	.top-slider-pager__arr {
+		left: 20px;
+		margin-left: 0;
+		bottom: 30px;
+	}
 }
 
 @media screen and (max-width: 1240px){
@@ -919,10 +924,13 @@
 	    min-width: 100%;
 	    padding-right: 0;
 	    display: flex;
-	    flex-wrap:wrap;
+		flex-wrap:wrap;
+		padding-left: 0!important;
 	}
+	.top-menu-list__item.active
 	.top-menu-list__item.active{
 		position: static;
+		padding-left: 0!important;
 	}
 	.top-menu-list__item {
 	    font-size: 18px;
