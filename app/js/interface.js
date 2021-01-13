@@ -653,3 +653,34 @@ $(function () {
         }
     });
 });
+
+
+$(function() {
+    var $animation_elements = $('.how-list__txt');
+    var $window = $(window);
+
+    function check_if_in_view() {
+        var window_height = $window.height();
+        //console.log(window_height);
+        var window_top_position = $window.scrollTop();
+
+        var window_bottom_position = (window_top_position + window_height);
+     
+        $.each($animation_elements, function() {
+            var $element = $(this);
+            var element_height = $element.outerHeight();
+            var element_top_position = $element.offset().top + 250;
+            var element_bottom_position = ((element_top_position) + element_height);
+            //console.log(element_top_position)
+         
+            if (element_top_position <= window_bottom_position) {
+                $element.addClass('is-ready');
+            } else {
+                $element.removeClass('is-ready');
+            }
+        });
+    }
+
+    $window.on('scroll resize', check_if_in_view);
+    $window.trigger('scroll');
+});

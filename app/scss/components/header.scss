@@ -1,6 +1,12 @@
 .page-header{
 	padding: 39px 0 30px;
 	background:#fff; 
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 15;
+	width: 100%;
 }
 
 .logo{
