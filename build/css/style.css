@@ -861,9 +861,73 @@ a.top-menu-list__item:hover {
     padding-right: 100px;
     pointer-events: none; }
     .top-slider-wrap .slider-nav .slide-m-next {
-      background: url(../img/svg/next-v.svg) center no-repeat; }
+      background: transparent;
+      width: 50px;
+      position: relative; }
+      .top-slider-wrap .slider-nav .slide-m-next:before {
+        content: "";
+        display: inline-block;
+        height: 1px;
+        width: 40px;
+        background: #fff;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        -webkit-transition: all .3s ease;
+        transition: all .3s ease; }
+      .top-slider-wrap .slider-nav .slide-m-next:after {
+        content: "";
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 4px 0 4px 13px;
+        border-color: transparent transparent transparent #ffffff;
+        position: absolute;
+        left: 40px;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+        -webkit-transition: all .3s ease;
+        transition: all .3s ease; }
+      .top-slider-wrap .slider-nav .slide-m-next:hover:before {
+        width: 50px; }
+      .top-slider-wrap .slider-nav .slide-m-next:hover:after {
+        left: 50px; }
     .top-slider-wrap .slider-nav .slide-m-prev {
-      background: url(../img/svg/prev-v.svg) center no-repeat; }
+      background: transparent;
+      width: 50px;
+      position: relative; }
+      .top-slider-wrap .slider-nav .slide-m-prev:before {
+        content: "";
+        display: inline-block;
+        height: 1px;
+        width: 40px;
+        background: #fff;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        -webkit-transition: all .3s ease;
+        transition: all .3s ease; }
+      .top-slider-wrap .slider-nav .slide-m-prev:after {
+        content: "";
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 4px 13px 4px 0;
+        border-color: transparent #ffffff transparent transparent;
+        position: absolute;
+        right: 40px;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+        -webkit-transition: all .3s ease;
+        transition: all .3s ease; }
+      .top-slider-wrap .slider-nav .slide-m-prev:hover:before {
+        width: 50px; }
+      .top-slider-wrap .slider-nav .slide-m-prev:hover:after {
+        right: 50px; }
 
 .trust-mobile {
   display: none; }
