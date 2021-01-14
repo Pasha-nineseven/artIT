@@ -647,11 +647,11 @@ $(function () {
         var problemsCount = $('.problems__item.active').length;
         $('#problemsCount').text(problemsCount);
 
-        if ((problemsCount >= 1) && (problemsCount <= 4) ) {
+        if ((problemsCount > 1) && (problemsCount < 4) ) {
             $('.problems-result').removeClass('bad good').addClass('middle');
-        } else if((problemsCount > 4)) {
+        } else if((problemsCount >= 4)) {
             $('.problems-result').removeClass('good middle').addClass('bad');
-        } else if((problemsCount == 0)) {
+        } else if((problemsCount == 0) || (problemsCount == 1)) {
             $('.problems-result').removeClass('bad middle').addClass('good');
         }
     });

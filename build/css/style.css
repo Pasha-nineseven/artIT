@@ -820,18 +820,6 @@ a.top-menu-list__item:hover {
   height: auto; }
   .top-slider__item .container {
     padding-left: 100px; }
-    .top-slider__item .container:after {
-      content: "";
-      display: inline-block;
-      width: 48px;
-      height: 49px;
-      position: absolute;
-      right: 0;
-      top: 50%;
-      -webkit-transform: translateY(-50%);
-          -ms-transform: translateY(-50%);
-              transform: translateY(-50%);
-      background: url(../img/svg/union-r.svg) center no-repeat; }
 
 .top-slider__img {
   position: absolute;
@@ -1551,6 +1539,8 @@ a.top-menu-list__item:hover {
 .target__item {
   width: 25%;
   padding-right: 40px; }
+  .target__item:hover .target____title {
+    color: #206DA9; }
 
 .target__num {
   font-size: 24px;
@@ -1562,7 +1552,9 @@ a.top-menu-list__item:hover {
 
 .target____title {
   font-size: 24px;
-  font-family: 'helveticaneuecyr'; }
+  font-family: 'helveticaneuecyr';
+  -webkit-transition: color .3s ease;
+  transition: color .3s ease; }
 
 .target__txt {
   line-height: 1.5; }
@@ -1838,7 +1830,8 @@ a.top-menu-list__item:hover {
   left: 0;
   padding: 0 39px;
   width: 100%;
-  font-family: 'helveticaneuecyr'; }
+  font-family: 'helveticaneuecyr';
+  min-height: 23px; }
   .samples-more:after {
     content: "";
     display: inline-block;
@@ -2212,13 +2205,13 @@ a.top-menu-list__item:hover {
       opacity: 1; }
   .news-item.m-cover .news-top,
   .news-item.m-cover .news-txt,
-  .news-item.m-cover .samples-more {
+  .news-item.m-cover .samples-more span {
     display: none; }
-  .news-item.m-cover:hover .news-in {
-    -webkit-box-shadow: 5px 16px 22px -15px rgba(0, 81, 117, 0.4);
-            box-shadow: 5px 16px 22px -15px rgba(0, 81, 117, 0.4); }
-  .news-item.m-cover:hover .news-img {
-    opacity: 0.5; }
+  .news-item.m-cover:hover .news-top,
+  .news-item.m-cover:hover .news-txt {
+    display: block; }
+  .news-item.m-cover:hover .samples-more span {
+    display: inline-block; }
 
 .news-in {
   display: block;
@@ -4063,11 +4056,11 @@ a.top-menu-list__item:hover {
   margin-left: 20px; }
 
 .afbf_success_block._without-popup .afbf_ok_icon {
-  float: none;
+  float: none !important;
   vertical-align: middle; }
 
 .afbf_success_block._without-popup .afbf_mess_ok .mess {
-  margin-left: 0;
+  margin-left: 0 !important;
   display: inline-block; }
 
 .contacts-form .alx-feedb-error {

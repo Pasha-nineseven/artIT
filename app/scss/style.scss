@@ -148,17 +148,6 @@ ymaps[class$="-copyright"] {
 	height: auto;
 	.container{
 		padding-left: 100px;
-		&:after{
-			content: "";
-			display: inline-block;
-			width: 48px;
-			height: 49px;
-			position: absolute;
-			right: 0;
-			top: 50%;
-			transform: translateY(-50%);
-			background: url(../img/svg/union-r.svg) center no-repeat;
-		}
 	} 
 }
 .top-slider__img{
@@ -204,9 +193,19 @@ ymaps[class$="-copyright"] {
 		pointer-events: none;
 		.slide-m-next{
 			background: url(../img/svg/next-v.svg) center no-repeat;
+			// background-size: 41px 20px;
+			// &:hover{
+			// 	width: 51px;
+			// 	background-size: 51px 20px;
+			// }
 		}
 		.slide-m-prev{
 			background: url(../img/svg/prev-v.svg) center no-repeat;
+			// background-size: 41px 20px;
+			// &:hover{
+			// 	width: 51px;
+			// 	background-size: 51px 20px;
+			// }
 		}
 	}
 }
@@ -989,6 +988,11 @@ ymaps[class$="-copyright"] {
 .target__item{
 	width: 25%;
 	padding-right: 40px;
+	&:hover{
+		.target____title{
+			color: #206DA9;
+		}
+	}
 }
 .target__num{
 	font-size: 24px;
@@ -1001,6 +1005,7 @@ ymaps[class$="-copyright"] {
 .target____title{
 	font-size: 24px;
 	 font-family: 'helveticaneuecyr';
+	 transition: color .3s ease;
 }
 .target__txt{
 	line-height: 1.5;
@@ -1293,7 +1298,8 @@ ymaps[class$="-copyright"] {
     left: 0;
     padding: 0 39px;
     width: 100%;
-    font-family: 'helveticaneuecyr';
+	font-family: 'helveticaneuecyr';
+	min-height: 23px;;
 	&:after{
 		content: "";
 		display: inline-block;
@@ -1684,16 +1690,16 @@ ymaps[class$="-copyright"] {
 	&.m-cover{
 		.news-top,
 		.news-txt,
-		.samples-more{
+		.samples-more span{
 			display: none;
 		}
 		&:hover{
-			.news-in{
-				//opacity: 0.3;
-				box-shadow: 5px 16px 22px -15px rgba(0, 81, 117, 0.4);
+			.news-top,
+			.news-txt{
+				display: block;
 			}
-			.news-img{
-				opacity: 0.5;
+			.samples-more span{
+				display: inline-block;
 			}
 		}
 	}
@@ -3765,11 +3771,11 @@ ymaps[class$="-copyright"] {
     margin-left: 20px
 }
 .afbf_success_block._without-popup .afbf_ok_icon{
-	float: none;
+	float: none!important;
 	vertical-align: middle;
 }
 .afbf_success_block._without-popup .afbf_mess_ok .mess {
-    margin-left: 0;
+    margin-left: 0!important;
     display: inline-block;
 }
 
