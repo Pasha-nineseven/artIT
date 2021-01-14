@@ -13,8 +13,8 @@ $(document).ready(function() {
 	//POPUP-VIDEO
     $(".js-video-link").fancybox({
         speed : 330,
-        transitionEffect: "slide", 
-        animationEffect: "zoom-in-out", 
+        transitionEffect: "slide",
+        animationEffect: "zoom-in-out",
         infobar: false,
         clickOutside : 'close',
         buttons: [
@@ -24,8 +24,8 @@ $(document).ready(function() {
     //POPUP-INLINE
     $(".js-popup-inline").fancybox({
         speed : 330,
-        transitionEffect: "slide", 
-        animationEffect: "zoom-in-out", 
+        transitionEffect: "slide",
+        animationEffect: "zoom-in-out",
         infobar: false,
         buttons: [
             "close"
@@ -83,7 +83,7 @@ $(document).ready(function() {
 	    })
 
 	    $('.top-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-	        var next = nextSlide; 
+	        var next = nextSlide;
 	        $('.top-slider-pager__item').removeClass('active');
 	        $('.top-slider-pager__item.slide-' + next).addClass('active');
 	    });
@@ -351,8 +351,24 @@ $(document).ready(function() {
         //     sliderSamplesInit();
         //     $('.samples-list').slick("setPosition");
         // }, 1000);
-        
-    })
+
+    });
+
+
+    if($('.top-slider-pager__arr').length>0){
+        $(window).scroll(function(){
+            var arr = $('.top-slider-pager__arr'),
+            scroll = $(window).scrollTop();
+
+            if (scroll >= 130) arr.addClass('active');
+            else arr.removeClass('active');
+        });
+        $('body').on('click','.top-slider-pager__arr.active', function(e){
+            e.preventDefault();
+            $('html,body').animate({ scrollTop: 0 }, 'slow');
+        });
+    }
+
 });
 
 
@@ -369,19 +385,6 @@ $(window).resize(function () {
 });
 
 
-if($('.top-slider-pager__arr').length>0){
-    $(window).scroll(function(){
-        var arr = $('.top-slider-pager__arr'),
-        scroll = $(window).scrollTop();
-
-        if (scroll >= 130) arr.addClass('active');
-        else arr.removeClass('active');
-    });
-    $('body').on('click','.top-slider-pager__arr.active', function(e){
-		e.preventDefault();
-		$('html,body').animate({ scrollTop: 0 }, 'slow');
-	});
-}
 
 // functions
 
@@ -407,7 +410,7 @@ function sliderHowInit() {
       		nextArrow: $(".js-how-next"),
         });
 
-       
+
     } else{
         if($slider.hasClass('slick-initialized')) {
             $slider.slick("unslick");
@@ -438,7 +441,7 @@ function sliderWhoInit() {
       		nextArrow: $(".js-who-next"),
         });
 
-       
+
     } else{
         if($slider.hasClass('slick-initialized')) {
             $slider.slick("unslick");
@@ -469,7 +472,7 @@ function sliderWhoInit() {
 //             nextArrow: $(".js-pr-next"),
 //         });
 
-       
+
 //     } else{
 //         if($slider.hasClass('slick-initialized')) {
 //             $slider.slick("unslick");
@@ -480,7 +483,7 @@ function sliderWhoInit() {
 
 
 function sliderSamplesInit() {
-	
+
     var $slider = $('.samples-list');
 
     if($(window).width() < 768) {
@@ -517,9 +520,9 @@ function sliderSamplesInit() {
                 ]
             });
         });
-            
-    
-       
+
+
+
     } else{
         if($slider.hasClass('slick-initialized')) {
             $slider.slick("unslick");
@@ -557,7 +560,7 @@ function sliderNumeralInit() {
 			]
         });
 
-       
+
     } else{
         if($slider.hasClass('slick-initialized')) {
             $slider.slick("unslick");
@@ -596,7 +599,7 @@ function sliderEffectInit() {
 			]
         });
 
-       
+
     } else{
         if($slider.hasClass('slick-initialized')) {
             $slider.slick("unslick");
@@ -622,7 +625,7 @@ function getScrollbarWidth() {
     // add innerdiv
     var inner = document.createElement("div");
     inner.style.width = "100%";
-    outer.appendChild(inner);        
+    outer.appendChild(inner);
 
     var widthWithScroll = inner.offsetWidth;
 
@@ -665,14 +668,14 @@ $(function() {
         var window_top_position = $window.scrollTop();
 
         var window_bottom_position = (window_top_position + window_height);
-     
+
         $.each($animation_elements, function() {
             var $element = $(this);
             var element_height = $element.outerHeight();
             var element_top_position = $element.offset().top + 250;
             var element_bottom_position = ((element_top_position) + element_height);
             //console.log(element_top_position)
-         
+
             if (element_top_position <= window_bottom_position) {
                 $element.addClass('is-ready');
             } else {
