@@ -936,7 +936,8 @@ a.top-menu-list__item:hover {
   padding-left: 100px; }
 
 .page-title {
-  overflow: hidden; }
+  overflow: hidden;
+  margin-bottom: 80px; }
   .page-title h2 {
     color: #333333;
     margin: 0;
@@ -956,9 +957,13 @@ a.top-menu-list__item:hover {
       left: calc(100% + 43px);
       top: 7px; }
   .page-title h1 {
+    color: #333333;
+    margin: 0;
+    font-size: 50px;
+    text-transform: uppercase;
+    font-family: 'helveticaneuecyr-bold';
     display: inline-block;
-    position: relative;
-    margin-bottom: 80px; }
+    position: relative; }
     .page-title h1:after {
       content: "";
       display: block;
@@ -966,8 +971,8 @@ a.top-menu-list__item:hover {
       height: 1px;
       width: 2000px;
       position: absolute;
-      left: -webkit-calc(100% + 38px);
-      left: calc(100% + 38px);
+      left: -webkit-calc(100% + 43px);
+      left: calc(100% + 43px);
       top: 13px; }
 
 .plan {
@@ -2765,8 +2770,13 @@ a.top-menu-list__item:hover {
 
 .news-in-top {
   margin-bottom: 89px; }
-  .news-in-top .page-title h2 {
-    max-width: 690px; }
+  .news-in-top .page-title h2, .news-in-top .page-title h1 {
+    max-width: 690px;
+    font-size: 28px; }
+
+.questions .page-title h2, .questions .page-title h1, .problems .page-title h2, .problems .page-title h1 {
+  max-width: 690px;
+  font-size: 28px; }
 
 .news-in-date {
   font-size: 18px;
@@ -2780,16 +2790,6 @@ a.top-menu-list__item:hover {
   display: -ms-flexbox;
   display: flex;
   position: relative; }
-  .news-in-view:before {
-    content: "";
-    display: inline-block;
-    width: 48px;
-    height: 28px;
-    background: url(../img/svg/union-b.svg) no-repeat;
-    position: absolute;
-    left: -100px;
-    top: 20px;
-    z-index: 2; }
 
 .news-in-view__img {
   width: 500px;
@@ -2828,6 +2828,12 @@ a.top-menu-list__item:hover {
   .page-top h1 {
     font-size: 50px;
     line-height: 1.2; }
+
+.page-top__title {
+  font-size: 50px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  font-family: 'helveticaneuecyr-bold'; }
 
 .page-top__bg {
   position: absolute;
@@ -4678,7 +4684,8 @@ a.top-menu-list__item:hover {
     padding: 50px 0 0; }
     .target .more-wrap {
       margin-bottom: 40px; }
-    .target .page-title h2:after {
+    .target .page-title h2:after,
+    .target .page-title h1:after {
       display: none; }
   .more-wrap {
     margin-bottom: 30px; }
@@ -5011,7 +5018,8 @@ a.top-menu-list__item:hover {
     display: inline; }
   .page-top {
     padding: 65px 0; }
-  .page-top h1 {
+  .page-top h1,
+  .page-top__title {
     font-size: 30px;
     margin-bottom: 0; }
   .news-in-date {
@@ -5351,7 +5359,7 @@ a.top-menu-list__item:hover {
             transform: none; } }
 
 @media screen and (max-width: 600px) {
-  .page-title h2 {
+  .page-title h2, h1 {
     font-size: 22px; }
   .menu-toggle-link {
     padding: 0;
@@ -5372,10 +5380,12 @@ a.top-menu-list__item:hover {
     display: none; }
   .page-header {
     padding: 24px 0; }
-  .page-title h2 {
+  .page-title h2,
+  .page-title h1 {
     display: block;
     padding-bottom: 5px; }
-    .page-title h2:after {
+    .page-title h2:after,
+    .page-title h1:after {
       left: 0;
       top: 100%; }
   .page-footer {
@@ -5437,7 +5447,8 @@ a.top-menu-list__item:hover {
     padding-top: 20px; }
   .page-news-slider__item .news-item {
     width: 100%; }
-  .page-top h1 {
+  .page-top h1,
+  .page-top__title {
     font-size: 26px; }
   .news-in-links__wrap {
     margin: 0;
@@ -5576,7 +5587,11 @@ a.top-menu-list__item:hover {
   .checkbox-item br {
     display: none; }
   .problems__item {
-    min-height: inherit; } }
+    min-height: inherit; }
+  .news-in-top .page-title h2, .news-in-top .page-title h1 {
+    font-size: 22px; }
+  .questions .page-title h2, .questions .page-title h1, .problems .page-title h2, .problems .page-title h1 {
+    font-size: 22px; } }
 
 @media screen and (max-width: 400px) {
   .start.m-card .video-wrap {

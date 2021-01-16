@@ -278,7 +278,7 @@ ymaps[class$="-copyright"] {
 }
 .page-title{
 	overflow: hidden;
-
+	margin-bottom: 80px;
 	h2{
 		color: #333333;
 		margin: 0;
@@ -300,9 +300,13 @@ ymaps[class$="-copyright"] {
 		}
 	}
 	h1{
+		color: #333333;
+		margin: 0;
+		font-size: 50px;
+		text-transform: uppercase;
+		font-family: 'helveticaneuecyr-bold';
 		display: inline-block;
 		position: relative;
-		margin-bottom: 80px;
 		&:after{
 			content: "";
 			display: block;
@@ -310,11 +314,27 @@ ymaps[class$="-copyright"] {
 			height: 1px;
 			width: 2000px;
 			position: absolute;
-			    left: calc(100% + 38px);
+			    left: calc(100% + 43px);
     		top: 13px;
 			// opacity: 0.4;
 		}
 	}
+	// h1{
+	// 	display: inline-block;
+	// 	position: relative;
+	// 	margin-bottom: 80px;
+	// 	&:after{
+	// 		content: "";
+	// 		display: block;
+	// 		background: #4F4F4F;
+	// 		height: 1px;
+	// 		width: 2000px;
+	// 		position: absolute;
+	// 		    left: calc(100% + 38px);
+    // 		top: 13px;
+	// 		// opacity: 0.4;
+	// 	}
+	// }
 }
 
 
@@ -2278,8 +2298,17 @@ ymaps[class$="-copyright"] {
 .news-in-top{
 	margin-bottom: 89px;
 	.page-title{
-		h2{
+		h2,h1{
 			max-width: 690px;
+			font-size: 28px;
+		}
+	}
+}
+.questions,.problems{
+	.page-title{
+		h2,h1{
+			max-width: 690px;
+			font-size: 28px;
 		}
 	}
 }
@@ -2292,17 +2321,17 @@ ymaps[class$="-copyright"] {
 .news-in-view{
 	display: flex;
 	position: relative;
-	&:before{
-		content: "";
-		display: inline-block;
-		width: 48px;
-		height: 28px;
-		background: url(../img/svg/union-b.svg) no-repeat;
-		position: absolute;
-		    left: -100px;
-    	top: 20px;
-		z-index: 2;
-	}
+	// &:before{
+	// 	content: "";
+	// 	display: inline-block;
+	// 	width: 48px;
+	// 	height: 28px;
+	// 	background: url(../img/svg/union-b.svg) no-repeat;
+	// 	position: absolute;
+	// 	    left: -100px;
+    // 	top: 20px;
+	// 	z-index: 2;
+	// }
 }
 .news-in-view__img{
 	width: 500px;
@@ -2348,6 +2377,13 @@ ymaps[class$="-copyright"] {
 		line-height: 1.2;
 	}
 }
+.page-top__title{
+	font-size: 50px;
+	line-height: 1.2;
+	text-transform: uppercase;
+    font-family: 'helveticaneuecyr-bold';
+}
+
 .page-top__bg{
 	position: absolute;
 	left: 0;
