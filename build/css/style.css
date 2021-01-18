@@ -2997,29 +2997,32 @@ a.top-menu-list__item:hover {
     background-blend-mode: darken;
     opacity: 0.5; }
 
-.news-bottom {
-  padding-top: 290px; }
-  .news-bottom .more-wrap {
-    margin-bottom: 121px; }
-  .news-bottom .btn-wrap {
+.news-bottom:last-child {
+  margin-bottom: -115px; }
+
+.news-bottom .more-wrap {
+  margin-bottom: 121px; }
+
+.news-bottom .btn-wrap {
+  display: inline-block;
+  position: relative; }
+  .news-bottom .btn-wrap:after {
+    content: "";
     display: inline-block;
-    position: relative; }
-    .news-bottom .btn-wrap:after {
-      content: "";
-      display: inline-block;
-      width: 48px;
-      height: 39px;
-      background: url(../img/svg/union-download.svg);
-      position: absolute;
-      right: -121px;
-      top: 50%;
-      -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-      transform: translateY(-50%); }
-  .news-bottom .more-link {
-    padding: 11px 42px; }
-    .news-bottom .more-link:before, .news-bottom .more-link:after {
-      display: none; }
+    width: 48px;
+    height: 39px;
+    background: url(../img/svg/union-download.svg);
+    position: absolute;
+    right: -121px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%); }
+
+.news-bottom .more-link {
+  padding: 11px 42px; }
+  .news-bottom .more-link:before, .news-bottom .more-link:after {
+    display: none; }
 
 .presentation-video-bottom .video-wrap {
   -webkit-transform: translateY(110px);
@@ -3050,12 +3053,8 @@ a.top-menu-list__item:hover {
       .news-in-links__item.m-title a:hover {
         text-decoration: none; }
 
-.page-transition {
-  padding-bottom: 25px; }
-
 .page-transition__wrap {
-  border-top: 1px solid #8AA6B3;
-  padding-top: 38px;
+  padding: 35px 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3106,6 +3105,8 @@ a.top-menu-list__item:hover {
       -webkit-transform: translateY(-50%);
           -ms-transform: translateY(-50%);
               transform: translateY(-50%); }
+  .page-transition__link:hover {
+    color: #206DA9; }
 
 .more {
   position: relative;
@@ -5071,8 +5072,8 @@ a.top-menu-list__item:hover {
     padding: 0 20px; }
   .news-in-links__item.m-title {
     font-size: 20px; }
-  .news-bottom {
-    padding-top: 160px; }
+  .news-bottom:last-child {
+    margin-bottom: -50px; }
   .news-bottom .more-wrap {
     margin-bottom: 50px; }
   .presentation .btn-wrap:after,

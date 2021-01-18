@@ -1129,7 +1129,10 @@
 		font-size: 20px;
 	}
 	.news-bottom {
-	    padding-top: 160px;
+		//padding-top: 160px;
+		&:last-child{
+			margin-bottom:-50px;
+		}
 	}
 	.news-bottom .more-wrap {
 	    margin-bottom: 50px;
@@ -1156,6 +1159,7 @@
 	}
 	.page-transition__link{
 		font-size: 14px;
+		
 	}
 	.card-top {
 	    padding: 50px 0 70px;

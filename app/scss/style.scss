@@ -2559,7 +2559,9 @@ ymaps[class$="-copyright"] {
 }
 
 .news-bottom{
-	padding-top: 290px;
+	&:last-child{
+		margin-bottom: -115px;
+	}
 	.more-wrap{
 		margin-bottom: 121px;
 		// padding-bottom: 120px;
@@ -2623,11 +2625,11 @@ ymaps[class$="-copyright"] {
 }
 
 .page-transition{
-	padding-bottom: 25px;
+	// padding-bottom: 25px;
 }
 .page-transition__wrap{
-	border-top: 1px solid #8AA6B3;
-	padding-top: 38px;
+	// border-top: 1px solid #8AA6B3;
+	padding: 35px 0;
 	display: flex;
 	justify-content: space-between;
 	font-family: 'helveticaneuecyr';
@@ -2671,6 +2673,9 @@ ymaps[class$="-copyright"] {
 			top: 50%;
 			transform: translateY(-50%);
 		}
+	}
+	&:hover{
+		color: #206DA9;
 	}
 }
 
