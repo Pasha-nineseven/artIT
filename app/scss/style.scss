@@ -2116,7 +2116,7 @@ ymaps[class$="-copyright"] {
 	background: url(../img/svg/union-b.svg) center no-repeat;
 	position: fixed;
 	left: 30px;
-    bottom: 30px;
+    bottom: 120px;
 	z-index: 10;
 	pointer-events: none;
 	transition: all .3s ease;
@@ -2633,13 +2633,18 @@ ymaps[class$="-copyright"] {
 	display: flex;
 	justify-content: space-between;
 	font-family: 'helveticaneuecyr';
+	position: relative;
 }
 .page-transition__link{
 	display: inline-block;
 	color: #4F4F4F;
-	position: relative;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
 	&.m-left{
 		padding-left: 62px;
+		position: static;
+		transform: none;
 		&:before{
 			content: "";
 			display: inline-block;
@@ -2658,6 +2663,8 @@ ymaps[class$="-copyright"] {
 	}
 	&.m-right{
 		padding-right: 62px;
+		position: static;
+		transform: none;
 		&:before{
 			content: "";
 			display: inline-block;

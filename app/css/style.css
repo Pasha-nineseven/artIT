@@ -2607,7 +2607,7 @@ a.top-menu-list__item:hover {
   background: url(../img/svg/union-b.svg) center no-repeat;
   position: fixed;
   left: 30px;
-  bottom: 30px;
+  bottom: 120px;
   z-index: 10;
   pointer-events: none;
   -webkit-transition: all .3s ease;
@@ -3063,14 +3063,23 @@ a.top-menu-list__item:hover {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  font-family: 'helveticaneuecyr'; }
+  font-family: 'helveticaneuecyr';
+  position: relative; }
 
 .page-transition__link {
   display: inline-block;
   color: #4F4F4F;
-  position: relative; }
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%); }
   .page-transition__link.m-left {
-    padding-left: 62px; }
+    padding-left: 62px;
+    position: static;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none; }
     .page-transition__link.m-left:before {
       content: "";
       display: inline-block;
@@ -3088,7 +3097,11 @@ a.top-menu-list__item:hover {
           -ms-transform: translateY(-50%);
               transform: translateY(-50%); }
   .page-transition__link.m-right {
-    padding-right: 62px; }
+    padding-right: 62px;
+    position: static;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none; }
     .page-transition__link.m-right:before {
       content: "";
       display: inline-block;
