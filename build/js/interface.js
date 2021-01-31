@@ -5,7 +5,8 @@ $(document).ready(function() {
 		e.preventDefault();
 		$(this).toggleClass('active');
 		$('.top-menu').fadeToggle(300);
-		$('body').toggleClass('fixed');
+        //$('body').toggleClass('fixed');
+       // $('html').toggleClass('fixed');
 	});
 
 
@@ -95,8 +96,8 @@ $(document).ready(function() {
     	var $sliderNews = $('.news-slider');
     	$sliderNews.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
             var i = (currentSlide ? currentSlide : 0) + 1;
-            $statusNews.text('0' + i);
-            $statusTotalNews.text('/' + '0' + slick.slideCount);
+            $statusNews.text(i);
+            $statusTotalNews.text('/' + slick.slideCount);
             // console.log( $statusNews.text);
             // console.log( i);
         });
@@ -157,8 +158,8 @@ $(document).ready(function() {
         var $sliderNews = $('.page-news-slider');
         $sliderNews.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
             var i = (currentSlide ? currentSlide : 0) + 1;
-            $statusNews.text('0' + i);
-            $statusTotalNews.text('/' + '0' + slick.slideCount);
+            $statusNews.text(i);
+            $statusTotalNews.text('/' + slick.slideCount);
             // console.log( $statusNews.text);
             // console.log( i);
         });
@@ -303,8 +304,8 @@ $(document).ready(function() {
         var $sliderNews = $('.samples-c-slider');
         $sliderNews.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
             var i = (currentSlide ? currentSlide : 0) + 1;
-            $statusNews.text('0' + i);
-            $statusTotalNews.text('/' + '0' + slick.slideCount);
+            $statusNews.text(i);
+            $statusTotalNews.text('/' + slick.slideCount);
             // console.log( $statusNews.text);
             // console.log( i);
         });

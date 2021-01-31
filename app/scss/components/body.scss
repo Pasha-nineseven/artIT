@@ -12,7 +12,10 @@ html{
     height: 100%;
     -ms-text-size-adjust: 100%;
   	-webkit-text-size-adjust: 100%;
-  	box-sizing: border-box;
+	  box-sizing: border-box;
+	  &.fixed{
+		  margin-right: 17px;
+	  }
 }
 
 
@@ -60,7 +63,14 @@ body {
 	display: flex;
   	flex-direction: column;
   	&.fixed{
-  		overflow: hidden;
+		overflow: hidden;
+		// position: fixed;
+		// height: 100vh;
+    	// padding-right: 17px;
+		// width: 100%;
+		// .page-header{
+		// 	padding-right: 17px;
+		// }
   	}
 }
 
