@@ -419,13 +419,15 @@ ymaps[class$="-copyright"] {
       list-style-type: circle; }
 
 .page-header {
-  padding: 39px 0 30px;
+  padding: 25px 0 20px;
   background: #fff;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 15;
-  width: 100%; }
+  width: 100%;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); }
 
 .logo {
   display: inline-block;
@@ -753,18 +755,18 @@ a.top-menu-list__item:hover {
   overflow: hidden; }
 
 .page-content {
-  padding: 230px 0 115px; }
+  padding: 185px 0 115px; }
 
 .layout--index {
   background: #fff; }
   .layout--index .page-content {
-    padding-top: 115px;
+    padding-top: 91px;
     padding-bottom: 0; }
   .layout--index .page-content > .container {
     max-width: 100%; }
 
 .layout--top .page-content {
-  padding-top: 115px; }
+  padding-top: 91px; }
 
 .layout--card {
   background: #fff;
@@ -981,6 +983,8 @@ a.top-menu-list__item:hover {
 .plan {
   background: #fff;
   padding: 115px 0 100px; }
+  .plan .page-title {
+    margin-bottom: 5px; }
 
 .plan-in {
   padding-left: 50%;
@@ -1267,6 +1271,8 @@ a.top-menu-list__item:hover {
   z-index: 8; }
   .how .plan-in {
     margin-bottom: 88px; }
+  .how .page-title {
+    margin-bottom: 5px; }
 
 .video-wrap {
   margin-bottom: -110px;
@@ -1519,6 +1525,10 @@ a.top-menu-list__item:hover {
     margin-top: -37px; }
   .start.m-white {
     background: #fff; }
+  .start .m-title {
+    margin-bottom: 35px; }
+  .start .page-title {
+    margin-bottom: 35px; }
 
 .start-top {
   margin-bottom: 49px;
@@ -1957,7 +1967,10 @@ a.top-menu-list__item:hover {
   .geography .plan__txt {
     max-width: 525px; }
   .geography .plan-in {
-    margin-bottom: 55px; }
+    margin-bottom: 55px;
+    margin-top: -35px; }
+  .geography .page-title {
+    margin-bottom: 0; }
 
 .geography__wrap {
   display: -webkit-box;
@@ -2011,6 +2024,8 @@ a.top-menu-list__item:hover {
       background: #BDBDBD;
       left: -webkit-calc(100% + 74px);
       left: calc(100% + 74px); }
+  .numeral .page-title {
+    margin-bottom: 0; }
 
 .numeral-wrap {
   position: relative; }
@@ -2116,7 +2131,8 @@ a.top-menu-list__item:hover {
     font-family: 'helveticaneuecyr';
     top: 26px; }
   .effect .page-title {
-    padding-bottom: 30px; }
+    padding-bottom: 30px;
+    margin-bottom: 0; }
     .effect .page-title h2:after {
       left: -webkit-calc(100% + 29px);
       left: calc(100% + 29px);
@@ -2185,6 +2201,8 @@ a.top-menu-list__item:hover {
 .status {
   padding: 120px 0;
   background: #EDEDED; }
+  .status .page-title {
+    margin-bottom: 0; }
 
 .status-wrap {
   position: relative; }
@@ -2258,6 +2276,8 @@ a.top-menu-list__item:hover {
 .news {
   padding: 120px 0 110px;
   background: #BACAD3; }
+  .news .page-title {
+    margin-bottom: 0; }
 
 .news-item {
   padding: 0 5px;
@@ -2368,10 +2388,11 @@ a.top-menu-list__item:hover {
   .slider-nav .slide-m-next {
     background: transparent;
     width: 50px;
-    height: 15px;
+    height: 20px;
     position: relative;
     cursor: pointer;
-    pointer-events: all; }
+    pointer-events: all;
+    display: inline-block; }
     .slider-nav .slide-m-next:before {
       content: "";
       display: inline-block;
@@ -2405,10 +2426,11 @@ a.top-menu-list__item:hover {
   .slider-nav .slide-m-prev {
     background: transparent;
     width: 50px;
-    height: 15px;
+    height: 20px;
     position: relative;
     cursor: pointer;
-    pointer-events: all; }
+    pointer-events: all;
+    display: inline-block; }
     .slider-nav .slide-m-prev:before {
       content: "";
       display: inline-block;
@@ -2475,6 +2497,8 @@ a.top-menu-list__item:hover {
       -webkit-transform: translateY(-50%);
           -ms-transform: translateY(-50%);
               transform: translateY(-50%); }
+  .trust .page-title {
+    margin-bottom: 0; }
 
 .dnone {
   display: none; }
@@ -3197,7 +3221,7 @@ a.top-menu-list__item:hover {
   font-family: 'helveticaneuecyr'; }
 
 .card-top {
-  padding: 260px 0 57px;
+  padding: 220px 0 57px;
   color: #fff;
   position: relative;
   height: auto; }
@@ -4715,8 +4739,6 @@ a.top-menu-list__item:hover {
   .contacts-address {
     padding-top: 0;
     margin-bottom: 20px; }
-  .contacts .page-title {
-    margin-bottom: 20px; }
   .contacts-bottom {
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
@@ -4782,8 +4804,6 @@ a.top-menu-list__item:hover {
     padding: 0;
     text-align: left;
     margin-bottom: 20px; }
-  .how-list .page-title {
-    margin-bottom: 20px; }
   .how-list__num:after {
     content: "";
     display: inline-block;
@@ -4806,7 +4826,8 @@ a.top-menu-list__item:hover {
   .start {
     padding-top: 50px; }
   .start .plan-in {
-    margin-bottom: 30px; }
+    margin-bottom: 30px;
+    margin-top: 0; }
   .more-link {
     padding: 13px 65px 13px 30px; }
   .target {
@@ -4828,8 +4849,6 @@ a.top-menu-list__item:hover {
     margin-bottom: 30px; }
     .target__item:last-child {
       margin-bottom: 0; }
-  .target .page-title {
-    margin-bottom: 20px; }
   .effectiveness-add {
     padding-left: 0;
     margin: -60px 0 35px; }
@@ -4845,8 +4864,6 @@ a.top-menu-list__item:hover {
   .who {
     padding: 50px 0;
     position: static; }
-  .who .page-title {
-    margin-bottom: 20px; }
   .who__icon {
     margin-bottom: 20px; }
   .who__txt {
@@ -4858,8 +4875,6 @@ a.top-menu-list__item:hover {
             flex-wrap: wrap; }
   .samples {
     padding: 50px 0; }
-  .samples .page-title {
-    margin-bottom: 20px; }
   .samples-in {
     background: #fff;
     -webkit-box-shadow: none !important;
@@ -4927,7 +4942,7 @@ a.top-menu-list__item:hover {
   .start-top {
     margin-bottom: 20px; }
   .page-title {
-    margin-bottom: 20px;
+    margin-bottom: 20px !important;
     overflow: visible; }
     .page-title h2 {
       display: block;
@@ -5485,7 +5500,10 @@ a.top-menu-list__item:hover {
     opacity: 1;
     -webkit-transform: none;
         -ms-transform: none;
-            transform: none; } }
+            transform: none; }
+  .geography .plan-in {
+    margin-bottom: 20px;
+    margin-top: 0; } }
 
 @media screen and (max-width: 600px) {
   .page-title h2, h1 {

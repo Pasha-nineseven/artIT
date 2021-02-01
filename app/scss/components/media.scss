@@ -556,9 +556,7 @@
 	    padding-top: 0;
 	    margin-bottom: 20px;
 	}
-	.contacts .page-title {
-	    margin-bottom: 20px;
-	}
+
 	.contacts-bottom{
 		flex-wrap:wrap;
 	}
@@ -623,9 +621,7 @@
 	    text-align: left; 
 	    margin-bottom: 20px;
 	}
-	.how-list .page-title {
-	        margin-bottom: 20px;
-	}
+
 	.how-list__num:after{
 		content: "";
 		display: inline-block;
@@ -655,6 +651,7 @@
 	}
 	.start .plan-in{
 		margin-bottom: 30px;
+		margin-top: 0;
 	}
 	.more-link {
 	    padding: 13px 65px 13px 30px;
@@ -686,9 +683,7 @@
 	    	margin-bottom: 0;
 	    }
 	}
-	.target .page-title{
-		margin-bottom: 20px;
-	}
+
 	.effectiveness-add {
 	    padding-left: 0;
 	    margin: -60px 0 35px;
@@ -710,9 +705,6 @@
 	    padding: 50px 0;
 	    position: static;
 	}
-	.who .page-title{
-		margin-bottom: 20px;
-	}
 	.who__icon {
 	    margin-bottom: 20px;
 	}
@@ -725,9 +717,6 @@
 	}
 	.samples{
 		padding: 50px 0; 
-	}
-	.samples .page-title{
-		margin-bottom: 20px;
 	}
 	.samples-in{
 		background: #fff;
@@ -808,22 +797,18 @@
 	    padding-top: 15px;
 	}
 	.target-arr {
-	    // bottom: -28px;
-	    // width: 10px;
-	    // height: 56px;
-	    // background-size: contain;
 	    display: none;
 	}
 	.start-top{
 		margin-bottom: 20px;
 	}
 	.page-title {
-	    margin-bottom: 20px;
-	        overflow: visible;
-	        h2{
-	        	display: block;
-    			padding-bottom: 15px;
-	        }
+	    margin-bottom: 20px!important;
+		overflow: visible;
+		h2{
+			display: block;
+			padding-bottom: 15px;
+		}
 	}
 	.page-title h2:after,
 	.page-title h1:after {
@@ -1508,6 +1493,10 @@
 	.how-list__txt{
 		opacity: 1;
 		transform: none;
+	}
+	.geography .plan-in {
+		margin-bottom: 20px;
+		margin-top: 0;
 	}
 }
 
