@@ -3816,6 +3816,11 @@ a.top-menu-list__item:hover {
   .start.m-erp .plan-in {
     margin-top: -73px; }
 
+.start.m-novideo {
+  background: #EDEDED; }
+  .start.m-novideo .plan-in {
+    margin-top: 0; }
+
 .route.m-erp .target-arr {
   background: url(../img/svg/arr-b.svg) center no-repeat; }
   .route.m-erp .target-arr:before {

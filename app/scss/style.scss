@@ -3470,6 +3470,12 @@ ymaps[class$="-copyright"] {
 			    margin-top: -73px;
 		}
 	}
+	&.m-novideo{
+		background: #EDEDED;
+		.plan-in {
+			margin-top: 0;
+		}
+	}
 }
 .route{
 	&.m-erp{
