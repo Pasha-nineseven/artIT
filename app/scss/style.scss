@@ -1315,7 +1315,7 @@ ymaps[class$="-copyright"] {
 	width: 33.33%;
 	height: auto;
 	margin-bottom: 20px;
-
+	position: relative;
 	&:hover{
 		.samples-in{
 			background: #fff;
@@ -1694,6 +1694,9 @@ ymaps[class$="-copyright"] {
 	// 		display: flex;
 	// 	}
 	// }
+	.slick-list{
+		min-width: 100%;
+	}
 	.slick-track{
 		display: flex;
 		min-width: 100%;
